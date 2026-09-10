@@ -106,10 +106,13 @@ The following methods and functions were used in this problem to create a unique
 
 • Boolean Indexing - A type of method used to extract portions of data based on the said conditions within either rows or columns. These conditions can be based on numbers in the columns and whether they match the specified name.
 
+• `.shape`- A built-in function within the Pandas Library to measure the shape of a dataframe or series variable, it usually measures how many rows and columns a dataframe has. It outputs (X,Y), where X is the number of Rows and Y is the number of columns.
+
 With the functions mentioned above, it allowed us to take specific cars with their rows and specific columns. Using `.loc`, it allows the author to acquire the
 3 models with the conditions that they are equal to the said cars stated in the columns. The author used the OR `|` command in order to get the multiple car
 models without uisng integer based location. Afterward, using the `.loc` command, the author could access specific columns and their elements.
 This allows the author to extract all of the rows and columns with specific models and columns and store it a dataframe variable named `selected_cars`.
+Finally with the `.shape` command, it allow us to retrieve the shape of the `selected_cars` variables.
 
 ``` python
 selected_cars = cars.loc[(cars['Model'] == 'Datsun 710') | #--> makes the condition to extract the row Datsun 710 and follows and or value to allow other conditions
@@ -117,6 +120,7 @@ selected_cars = cars.loc[(cars['Model'] == 'Datsun 710') | #--> makes the condit
                         (cars['Model'] == 'Ferrari Dino'),   #--> makes the condition to extract the row Ferrari Dino
                         ['Model', 'mpg', 'cyl', 'hp', 'gear']] #--> Shows only specific columns
 selected_cars #--> Shows the selected cars
+selected_cars.shape #--> shows the number of rows and columns aka shape of the variable.
 ```
 Thank you for Reading!\
 9/09/2026 - Submitted ipynb File\
